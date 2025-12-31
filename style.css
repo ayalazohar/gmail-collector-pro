@@ -1,0 +1,134 @@
+:root {
+  --j-red: #d93025;
+  --j-blue: #1a73e8;
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #dadce0;
+}
+
+body { 
+  font-family: 'Google Sans', Roboto, sans-serif; 
+  width: 450px; height: 600px; margin: 0; 
+  background: var(--bg); display: flex; flex-direction: column; 
+  direction: rtl; overflow: hidden;
+}
+
+.header { 
+  padding: 12px 16px; background: white; 
+  border-bottom: 1px solid #eee; display: flex; 
+  align-items: center; justify-content: space-between;
+}
+
+.stats-bar {
+  display: flex; gap: 8px; padding: 8px 16px; background: #fff;
+}
+
+.stat-item {
+  flex: 1; background: #fdfdfd; padding: 8px;
+  border-radius: 12px; text-align: center; cursor: pointer;
+  border: 1px solid #eee; transition: 0.2s;
+}
+.stat-item:hover { border-color: var(--j-red); background: #fff1f0; }
+.stat-num { display: block; font-weight: bold; color: var(--j-red); font-size: 15px; }
+.stat-label { font-size: 10px; color: #777; }
+
+.tools-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px; background: #fff; border-bottom: 1px solid #f1f3f4;
+}
+
+.search-box {
+  flex: 2; padding: 8px 16px; border-radius: 20px;
+  border: 1px solid #dfe1e5; background: #f1f3f4;
+  font-size: 13px; outline: none;
+}
+.search-box:focus { background: #fff; border-color: var(--j-blue); }
+
+#dateFilter {
+  flex: 1; padding: 6px; border-radius: 20px;
+  border: 1px solid #dfe1e5; font-size: 11px; outline: none; cursor: pointer;
+}
+
+#downloadZip {
+  flex: 1.5; background: var(--j-blue); color: white; border: none;
+  padding: 8px 12px; border-radius: 20px; font-size: 12px;
+  font-weight: 500; cursor: pointer; white-space: nowrap;
+}
+
+#scroll-container { flex: 1; overflow-y: auto; padding: 12px 16px; }
+
+/* כרטיס מלבני משופר */
+.card {
+  position: relative;
+  display: flex; flex-direction: row; background: var(--surface);
+  border-radius: 12px; margin-bottom: 12px; height: 90px;
+  border: 1px solid var(--border); overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* כפתור בחירה צף בפינה */
+.select-item {
+  position: absolute; top: 6px; right: 6px; z-index: 10;
+  width: 18px; height: 18px; cursor: pointer;
+  accent-color: var(--j-blue);
+  filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3));
+}
+
+.preview {
+  width: 95px; min-width: 95px; height: 100%;
+  background: #f1f3f4; display: flex; align-items: center;
+  justify-content: center; font-size: 32px; border-left: 1px solid #eee;
+  cursor: zoom-in; position: relative;
+}
+.preview img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-body {
+  flex: 1; display: flex; flex-direction: column;
+  padding: 10px 14px; justify-content: space-between; min-width: 0;
+}
+
+.title {
+  font-weight: 600; font-size: 14px; color: #202124;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.badge {
+  font-size: 9px; padding: 2px 6px; border-radius: 4px; color: white; margin-right: 5px; font-weight: bold;
+}
+.bg-pdf { background: #ea4335; }
+.bg-img { background: #fbbc04; }
+.bg-excel { background: #1e8e3e; }
+
+.actions { display: flex; gap: 8px; }
+.btn-act {
+  padding: 5px 12px; border: none; background: #f1f3f4;
+  border-radius: 6px; cursor: pointer; color: var(--j-blue);
+  font-weight: 600; font-size: 12px;
+}
+.btn-act:hover { background: #e8eaed; }
+
+/* Lightbox */
+#lightbox {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9); display: none; z-index: 1000;
+  justify-content: center; align-items: center; cursor: pointer;
+}
+#lightbox img { max-width: 90%; max-height: 80%; border-radius: 4px; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+    color: #999;
+}
+
+.footer a {
+    color: var(--j-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

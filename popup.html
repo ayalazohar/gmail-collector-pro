@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="libs/jszip.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div style="font-weight: bold; color: #d93025; font-size: 20px;">G-Collector <small style="font-size:10px; vertical-align:top;">ULTRA</small></div>
+    <button id="fetchBtn" style="background:#d93025; color:white; border:none; padding:8px 18px; border-radius:24px; cursor:pointer; font-weight:500;">סריקה ⚡</button>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item" data-filter="all"><span id="count-all" class="stat-num">0</span><span class="stat-label">הכל</span></div>
+    <div class="stat-item" data-filter="image"><span id="count-imgs" class="stat-num">0</span><span class="stat-label">תמונות</span></div>
+    <div class="stat-item" data-filter="file"><span id="count-files" class="stat-num">0</span><span class="stat-label">מסמכים</span></div>
+    <div class="stat-item" data-filter="link"><span id="count-links" class="stat-num">0</span><span class="stat-label">קישורים</span></div>
+  </div>
+
+  <div class="tools-row">
+    <input type="text" id="searchInput" class="search-box" placeholder="חיפוש חופשי...">
+    <select id="dateFilter">
+        <option value="all">כל הזמן</option>
+        <option value="today">היום</option>
+        <option value="week">השבוע</option>
+    </select>
+    <button id="downloadZip">ZIP (0)</button>
+  </div>
+
+  <div id="scroll-container">
+    <div id="itemsList"></div>
+    <div id="status" style="text-align:center; padding:10px; font-size:12px; color:#666;"></div>
+  </div>
+
+  <div id="lightbox"><img src=""></div>
+
+  <script src="popup.js"></script>
+</body>
+<div class="footer">
+    נוצר על ידי <a>  אילה זוהר</a>
+  </div>
+</html>

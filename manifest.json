@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "G-Collector Ultra Pro",
+  "version": "4.0",
+  "description": "Extract files, images, and links from your Gmail in one click.",
+  "permissions": ["identity", "storage"],
+  "host_permissions": ["https://gmail.googleapis.com/*"],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/icon128.png"
+  },
+  "oauth2": {
+    "client_id": "802817099353-l41ccirbeu14m521747ocl8f148ejesm.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/gmail.readonly"]
+  }
+}
